@@ -1,6 +1,7 @@
 ﻿var weekNav = document.querySelector(".wk_nav");
 
 var wkllbls = [
+    "Home",
     "Week 1",
     "Week 2",
     "Week 3",
@@ -16,8 +17,8 @@ var wkllbls = [
     "Week 14",
 ];
 
-var wklnks = [
-    "week_1/index.html",
+var wklnks = ["./index.html",
+    "./week_1/index.html",
     "week_2/index.html",
     "week_3/index.html",
     "week_4/index.html",
