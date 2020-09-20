@@ -63,13 +63,8 @@ header h4{
     padding: 0;
   }
 /*Main*/
-.rightside{
-    /*! flex: 50%; */
-}
 main{
-   min-width: 600px; max-width: 80%; padding: 20px; /*
-    margin-right: auto;
-    margin-left: 250px; */
+   min-width: 600px; max-width: 80%; padding: 20px;
    flex: 50%;
 }
 /*Footer*/
