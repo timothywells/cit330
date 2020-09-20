@@ -1,7 +1,6 @@
 /*Whole HTML*/
 html{
     min-width: 900px;
-    width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -11,24 +10,30 @@ body{
     padding: 0;
 }
 /*Navigation*/
+.flexnav{
+}
 nav{
-    float: left; 
     height: auto;
-    margin: 0 25px 0 0;
+    margin: 0;
     background-color: #f1f1f1;
+    padding: 0;
+    max-width: 10em;
+    flex: 10%;
 }
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 200px;
+    width: 100%;
     background-color: #f1f1f1;
+    text-align: center;
 }
 nav li a {
     display: block;
     color: #000;
-    padding: 8px 16px;
+    padding: 8px 0px;
     text-decoration: none;
+    margin: 0;
 }
 nav li a:hover {
     background-color: #555;
@@ -49,13 +54,23 @@ header h1{
 header h4{
     color: white;
 }
-/*Main*/
-main{
-    min-width: 600px;
-    max-width: 900px;
+
+/*Column*/
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
     padding: 0;
+  }
+/*Main*/
+.rightside{
+    /*! flex: 50%; */
+}
+main{
+   min-width: 600px; max-width: 80%; padding: 20px; /*
     margin-right: auto;
-    margin-left: 250px; 
+    margin-left: 250px; */
+   flex: 50%;
 }
 /*Footer*/
 footer{
@@ -68,8 +83,8 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    bottom:  0;
+    /*! position: absolute; */
+    /*! bottom:  0; */
 }
 #copyright{
     color: white;
