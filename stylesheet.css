@@ -67,7 +67,7 @@ footer{
     background-color: midnightblue;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 #copyright{
     color: white;
