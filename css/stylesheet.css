@@ -23,7 +23,7 @@ nav{
     background-color: #f1f1f1;
     padding: 0;
     max-width: 10em;
-    flex: 10%;
+    flex: 15%;
 }
 nav ul {
     list-style-type: none;
@@ -74,12 +74,12 @@ main{
    /*min-width: 600px;*/
    max-width: 80%;
    padding: 20px;
-   flex: 50%;
+   flex: 75%;
 }
 /*Footer*/
 footer{
     clear: both;
-    width: 100%;
+    width: auto;
     height: auto;
     padding: 1em;
     margin: 0;
