@@ -1,5 +1,5 @@
-﻿var weekNav = document.querySelector(".wk_nav");
-
+﻿/*Navigation*/
+var weekNav = document.querySelector(".wk_nav");
 var wkllbls = [
     "Home",
     "Week 1",
@@ -16,7 +16,6 @@ var wkllbls = [
     "Week 13",
     "Week 14",
 ];
-
 var wklnks = [
     "./index.html",
     "./week_1/index.html",
@@ -34,8 +33,6 @@ var wklnks = [
     "./week_13/index.html",
     "./week_14/index.html",
 ];
-
-
 for (i=0; i < wkllbls.length; i++) {
     var weekLine = document.createElement ("li");
     var a = document.createElement ("a");
@@ -47,6 +44,11 @@ for (i=0; i < wkllbls.length; i++) {
     weekLine.appendChild(a);
     weekNav.appendChild(weekLine);
 }
+/*Copy Right Date*/
+document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+
+
+
 
 /*document.getElementById("head") = headInfo;
 var headInfo = {
