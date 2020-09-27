@@ -45,7 +45,7 @@ for (i=0; i < wkllbls.length; i++) {
     weekNav.appendChild(weekLine);
 }
 /*Copy Right Date*/
-document.getElementById('year').appendChild(document.createTextNode(new Date().getFullYear()))
+//document.getElementById('year').appendChild(document.createTextNode(new Date().getFullYear()))
 
 
 
