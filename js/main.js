@@ -18,21 +18,21 @@ var wkllbls = [
 ];
 
 var wklnks = [
-    "/cit330/index.html",
-    "/cit330/week_1/index.html",
-    "/cit330/week_2/index.html",
-    "/cit330/week_3/index.html",
-    "/cit330/week_4/index.html",
-    "/cit330/week_5/index.html",
-    "/cit330/week_6/index.html",
-    "/cit330/week_7/index.html",
-    "/cit330/week_8/index.html",
-    "/cit330/week_9/index.html",
-    "/cit330/week_10/index.html",
-    "/cit330/week_11/index.html",
-    "/cit330/week_12/index.html",
-    "/cit330/week_13/index.html",
-    "/cit330/week_14/index.html",
+    "./index.html",
+    "./week_1/index.html",
+    "./week_2/index.html",
+    "./week_3/index.html",
+    "./week_4/index.html",
+    "./week_5/index.html",
+    "./week_6/index.html",
+    "./week_7/index.html",
+    "./week_8/index.html",
+    "./week_9/index.html",
+    "./week_10/index.html",
+    "./week_11/index.html",
+    "./week_12/index.html",
+    "./week_13/index.html",
+    "./week_14/index.html",
 ];
 
 
