@@ -128,3 +128,8 @@ audio{
     align-items: center;
     justify-content: center 
 }
+@media only screen and (max-width: 400px) {
+    nav{
+        max-width: auto;
+    }
+  }
