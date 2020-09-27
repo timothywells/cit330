@@ -17,7 +17,7 @@ var wkllbls = [
     "Week 14",
 ];
 var wklnks = [
-    "./index.html",
+    "../index.html",
     "/cit330/week_1/index.html",
     "/cit330/week_2/index.html",
     "/cit330/week_3/index.html",
