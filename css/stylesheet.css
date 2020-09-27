@@ -47,10 +47,11 @@ header{
 /*Headings*/
 header h1{
     color: white;
-    font-size: xxx-large;
+    font-size: 36px;
 }
 header h4{
     color: white;
+    font-size: 18px;
 }
 
 /*Column*/

@@ -47,3 +47,13 @@ for (i=0; i < wkllbls.length; i++) {
     weekLine.appendChild(a);
     weekNav.appendChild(weekLine);
 }
+
+/*document.getElementById("head") = headInfo;
+var headInfo = {
+    <meta name="author" content="Timothy Wells">
+    <meta charset="utf-8">
+    <html lang="en-US"></html>
+    <meta name="keywords" content="HTML, CSS, JavaScript, WDD 330, Front End Development">
+    <link rel="stylesheet" href="/cit330/css/stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+}*/
