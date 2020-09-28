@@ -128,6 +128,22 @@ audio{
     align-items: center;
     justify-content: center 
 }
+
+#img_me{
+    margin: 0 1em 1em 0;
+    Padding: 0;
+    width: 25%;
+    height: auto;
+    float: left;
+    text-align: center;
+}
+img{
+    margin: 0;
+    Padding: 0;
+    width: 100%;
+    height: auto;
+}
+/*Meida for Phones*/
 @media only screen and (max-width: 400px) {
     nav{
         max-width: 100%;
