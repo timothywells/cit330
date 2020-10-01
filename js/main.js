@@ -18,20 +18,20 @@ var wkllbls = [
 ];
 var wklnks = [
     "/cit330/index.html",
-    "/cit330/week_1/index.html",
-    "/cit330/week_2/index.html",
-    "/cit330/week_3/index.html",
-    "/cit330/week_4/index.html",
-    "/cit330/week_5/index.html",
-    "/cit330/week_6/index.html",
-    "/cit330/week_7/index.html",
-    "/cit330/week_8/index.html",
-    "/cit330/week_9/index.html",
-    "/cit330/week_10/index.html",
-    "/cit330/week_11/index.html",
-    "/cit330/week_12/index.html",
-    "/cit330/week_13/index.html",
-    "/cit330/week_14/index.html",
+    "/cit330/wks/week_1/index.html",
+    "/cit330/wks/week_2/index.html",
+    "/cit330/wks/week_3/index.html",
+    "/cit330/wks/week_4/index.html",
+    "/cit330/wks/week_5/index.html",
+    "/cit330/wks/week_6/index.html",
+    "/cit330/wks/week_7/index.html",
+    "/cit330/wks/week_8/index.html",
+    "/cit330/wks/week_9/index.html",
+    "/cit330/wks/week_10/index.html",
+    "/cit330/wks/week_11/index.html",
+    "/cit330/wks/week_12/index.html",
+    "/cit330/wks/week_13/index.html",
+    "/cit330/wks/week_14/index.html",
 ];
 for (i=0; i < wkllbls.length; i++) {
     var weekLine = document.createElement ("li");
@@ -44,12 +44,10 @@ for (i=0; i < wkllbls.length; i++) {
     weekLine.appendChild(a);
     weekNav.appendChild(weekLine);
 }
+
+
 /*Copy Right Date*/
 //document.getElementById('year').appendChild(document.createTextNode(new Date().getFullYear()))
-
-
-
-
 /*document.getElementById("head") = headInfo;
 var headInfo = {
     <meta name="author" content="Timothy Wells">
