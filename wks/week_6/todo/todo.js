@@ -12,15 +12,12 @@ function newElement() {
     document.getElementById("input").value = "";
     li.classList.add("listItem");
     
-    //localStorage.setItem('toDo', )
-
     //Add the X to close/hide element  
     var span = document.createElement("SPAN");
     var txt = document.createTextNode("\u00D7");
     span.className = "close";
     span.appendChild(txt);
     li.appendChild(span);
-  
     for (i = 0; i < close.length; i++) {
       close[i].onclick = function() {
         var div = this.parentElement;
@@ -29,7 +26,11 @@ function newElement() {
     }
   }
 
-  // Click on a close button to hide the current list item
+
+
+
+  
+// Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -39,7 +40,7 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
-  // Add active class to the current control button (highlight it)
+// Add active class to the current control button (highlight it)
 var btnContainer = document.getElementById("filterContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
@@ -58,5 +59,5 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
-// Click on a close button to hide the current list item using local storage
+// Click on a close button to delete the current list item using local storage
 

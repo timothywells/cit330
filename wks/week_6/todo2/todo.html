@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Timothy Wells">
+    <title>To Do App</title>
+</head>
+<body>
+    <div id="todo_header" class="header">
+        <h2 style="margin:5px">My To Do List</h2>
+        <input type="text" id="inputToDo" placeholder="List item...">
+        <span onclick="newTodo()" class="addBtn">Add</span>
+      </div>
+      
+      <div id="filterContainer" class="filterContainer">
+        <button onclick="filterSelect()" class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button onclick="filterSelect()" class="btn" onclick="filterSelection('done')"> Done</button>
+        <button onclick="filterSelect()" class="btn" onclick="filterSelection('todo')"> To Do</button>
+      </div>
+           
+      <ul class="list" id="list"></ul>
+</body>
+    <script src="todo.js"></script>
+</html>
