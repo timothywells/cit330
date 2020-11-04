@@ -11,7 +11,8 @@ function newElement() {
     }
     document.getElementById("input").value = "";
     li.classList.add("listItem");
-    
+   
+    /* 
     //Add the X to close/hide element  
     var span = document.createElement("SPAN");
     var txt = document.createTextNode("\u00D7");
@@ -24,22 +25,10 @@ function newElement() {
         div.style.display = "none";
       }
     }
-  }
+    */
+};
 
-
-
-
-  
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
+  /*
 // Add active class to the current control button (highlight it)
 var btnContainer = document.getElementById("filterContainer");
 var btns = btnContainer.getElementsByClassName("btn");
@@ -49,6 +38,19 @@ for (var i = 0; i < btns.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
+};
+*/
+
+
+/*  
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
 }
 
 // Add a "checked" symbol when clicking on a list item
@@ -61,3 +63,4 @@ list.addEventListener('click', function(ev) {
 
 // Click on a close button to delete the current list item using local storage
 
+*/
