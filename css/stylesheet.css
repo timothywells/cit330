@@ -143,6 +143,12 @@ img{
     width: 100%;
     height: auto;
 }
+
+iframe{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
 /*Meida for Phones*/
 @media only screen and (max-width: 400px) {
     nav{
