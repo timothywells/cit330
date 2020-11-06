@@ -2,14 +2,20 @@
 const todoInput = document.querySelector(".inputToDo");
 const todoButton = document.querySelector(".addBtn");
 const todoList = document.querySelector(".todo-list");
-const filterContainer = document.querySelector(".filterContainer");
-//const filterButton = document.querySelector(".btn");
+const allFilter = document.getElementById("btn1");
+const doneFilter = document.getElementById("btn2");
+const todoFilter = document.getElementById("btn3");
+const allClass = document.getElementsByClassName("all");
+const doneClass = document.getElementsByClassName("done");
+const todoClass = document.getElementsByClassName("todo");
 
 //Event Listeners
+document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", newToDo);
 todoList.addEventListener("click", deleteCheck);
-filterContainer.addEventListener("click", filterSelect);
-//filterButton.addEventListener("click", filterList);
+allFilter.addEventListener("click", ()=> filterSelect("all"));
+doneFilter.addEventListener("click", ()=> filterSelect("done"));
+todoFilter.addEventListener("click", ()=> filterSelect("todo"));
 
 //Functions
 function newToDo(event) {
@@ -28,6 +34,8 @@ function newToDo(event) {
     newTodoItem.classList.add("todo-item");
     newTodoItem.innerText = todoInput.value;
     todoDiv.appendChild(newTodoItem);
+//Local storage, add to storage
+    saveLocalTodo(todoInput.value);
 //Delete Button
     const deleteButton = document.createElement("button");
     deleteButton.classList.add("delete-button");
@@ -38,7 +46,6 @@ function newToDo(event) {
 //Clear input field
     todoInput.value = "";
 //
-
 }
 
 //Checking for actions
@@ -47,105 +54,114 @@ function deleteCheck(event) {
     //Delete the listed item
     if (item.classList[0] === "delete-button"){
         const todo = item.parentElement;
+        removeLocalStorage(todo);
         todo.remove();
     }
     if (item.classList[0] === "done-button"){
         const todo = item.parentElement;
         todo.classList.toggle("todo");
-        todo.classList.toggle("completed");
+        todo.classList.toggle("done");
         const listed = item.nextElementSibling;
-        listed.classList.toggle("crossed")
+        listed.classList.toggle("crossed");
     }
 }
 
-
-// Add active class to the current filter button
-function filterSelect(){
-    var btnContainer = document.getElementById("filterContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    var current = document.getElementsByClassName("active");
-    const listItem = document.getElementById("btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-            current[0].className = current[0].className.replace("active", "");
-            this.className += " active";
-        })
+//
+function filterSelect(type) {
+    if (type === "all"){
+        allFilter.classList.toggle('active', true);
+        todoFilter.classList.toggle('active', false);
+        doneFilter.classList.toggle('active', false);
+        for (let i = 0; i < allClass.length; i++) {
+            allClass[i].style.display = "";
+        }
     }
-    if (listItem.className[1] == "filterAll"){
-        console.log("filterAll");
-        // const allItems = document.getElementsByClassName("all");
-        // allItems.classList.toggle("show");
+    else if (type === "done"){
+        allFilter.classList.toggle('active', false);
+        todoFilter.classList.toggle('active', false);
+        doneFilter.classList.toggle('active', true);
+        for (let i = 0; i < allClass.length; i++) {
+            if (allClass[i].classList.contains("done")) {
+            allClass[i].style.display = "";
+                }
+            else {
+                allClass[i].style.display = "none";
+                }
+            }
+        }
+    else if (type === "todo"){
+        allFilter.classList.toggle('active', false);
+        todoFilter.classList.toggle('active', true);
+        doneFilter.classList.toggle('active', false);
+        for (let i = 0; i < allClass.length; i++) {
+            if (allClass[i].classList.contains("todo")) {
+            allClass[i].style.display = "";
+                }
+            else {
+                allClass[i].style.display = "none";
+            }    
+        }
     }
-    else if (listItem.className[1] == "filterDone"){
-        console.log("filterDone");
-        // const allItems = document.getElementsByClassName("all");
-        // allItems.classList.toggle("show");
-    }
-    else if (listItem.className[1] == "filterTodo"){
-        console.log("filterTodo");
-        // const allItems = document.getElementsByClassName("all");
-        // allItems.classList.toggle("show");
+    else {
+        allFilter.classList.toggle('active', false);
+        todoFilter.classList.toggle('active', false);
+        doneFilter.classList.toggle('active', false);
     }
 }
 
+//Local Storage
+function saveLocalTodo(todo){
+    let todos;
+    if (localStorage.getItem("todos") === null){
+        todos = [];
+    } else {
+        todos = JSON.parse(localStorage.getItem("todos"));
+    }
+    todos.push(todo);
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
 
-// function filterList() {
-//     var x = document.getElementById("filterContainer");
-//     var a = document.getElementsByClassName("all");
-//     var b = document.getElementsByClassName("todo");
-//     var c = document.getElementsByClassName("completed");
-//     if (x.classList[1] === "filterAll"){
-//         a.style.visibility = "visible";
-//     }
-//     if (x.classList.contains("filterDone")){
-//         b.style.display = "none";
-//         c.style.visibility = "visible";
-//     }
-//     if (x.classList.contains("filterTodo")){
-//         b.style.visibility = "visible";
-//         c.style.display = "none";
-//     }
+function getTodos(){
+//Check for info    
+    let todos;
+    if (localStorage.getItem("todos") === null){
+        todos = [];
+    } else {
+        todos = JSON.parse(localStorage.getItem("todos"));
+    }
+    todos.forEach(function(todo) {
+//Create a todo div
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("all", "todo");
+//Completed Button
+    const completedButton = document.createElement("button");
+    completedButton.classList.add("done-button");
+    completedButton.innerText = "Done";
+    todoDiv.appendChild(completedButton);
+//Create the LI
+    const newTodoItem = document.createElement("li");
+    newTodoItem.classList.add("todo-item");
+    newTodoItem.innerText = todo;
+    todoDiv.appendChild(newTodoItem);
+//Delete Button
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete-button");
+    deleteButton.innerText = "Delete";
+    todoDiv.appendChild(deleteButton);
+//append to list
+    todoList.appendChild(todoDiv);
+    });
+}
 
-// }
-
-
-// function filterList(){
-//     var btnContainer = document.getElementById("filterContainer");
-//     var btns = btnContainer.getElementsByClassName("btn");
-//     var current = document.getElementsByClassName("active");
-//     // var ul = document.getElementById("list");
-//     // var listAll = document.getElementsByClassName("all");
-//     // var listDone = document.getElementsByClassName("completed");
-//     // var listTodo = document.getElementsByClassName("todo");
-//     if(btns=classList("active") && current){
-//         console.log("test");
-//     }
-
-// }
-
-
-
-
-/* <button id="all" class="btn filterAll active" onclick="filterSelect(all)"> Show all</button>
-    <button id="done" class="btn filterDone"  onclick="filterSelect(done)"> Done</button>
-    <button id="todo" class="btn filterTodo"  onclick="filterSelect(todo)"> To Do</button> */
-
-
-//Filter using filter buttons
-// function filterCheck(event) {
-// const item = event.target;
-
-// if (item.classList[1] === "filterAll") {
-//     const all = document.getElementsByClassName("all");
-//     all.classList.toggle("show");
-// }
-
-// if (item.classList[1] === "filterTodo"){
-//     const todo = document.getElementsByClassName("todo");
-//     todo.classList.toggle("show");
-// }
-// if (item.classList[1] === "filterDone"){
-//     const completed = document.getElementsByClassName("completed");
-//     completed.classList.toggle("show");
-// }
-// }
+function removeLocalStorage(todo) {
+    let todos;
+    if (localStorage.getItem("todos") === null){
+        todos = [];
+    } else {
+        todos = JSON.parse(localStorage.getItem("todos"));
+    }
+    //console.log(todo.children[1].innerText);
+    const todoIndex = todo.children[1].innerText;
+    todos.splice(todos.indexOf(todoIndex), 1);
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
