@@ -39,7 +39,7 @@ for (i=0; i < wkllbls.length; i++) {
     var weekLine = document.createElement ("li");
     var a = document.createElement ("a");
     var link = document.createTextNode (wkllbls[i]);
-    weekLine.id.add("weeks");
+    weekLine.classList.add("weeks");
     a.title = wkllbls[i];
     a.href = wklnks[i];
 
@@ -48,11 +48,11 @@ for (i=0; i < wkllbls.length; i++) {
     weekNav.appendChild(weekLine);
 }
 
-var highlight = document.querySelector("#weeks");
+var highlight = document.querySelector(".weeks");
 highlight.addEventListener("click", navHighlight);
 
 function navHighlight(){
-    if (highlight.classlist[1] != "active") {
+    if (highlight.classList[1] != "active") {
         highlight.classList.toggle('active', true);
     } else {
         highlight.classList.toggle('active', false);
