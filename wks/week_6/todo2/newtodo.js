@@ -45,7 +45,7 @@ function newToDo(event) {
     todoList.appendChild(todoDiv);
 //Clear input field
     todoInput.value = "";
-//
+    
 }
 
 //Checking for actions
