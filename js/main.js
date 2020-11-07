@@ -1,7 +1,7 @@
 ﻿/*Navigation*/
 var weekNav = document.querySelector(".wk_nav");
 var highlight = document.querySelector(".weeks");
-highlight.addEventListener("click", navHighlight);
+// highlight.addEventListener("click", navHighlight);
 
 var wkllbls = [
     "Home",
