@@ -41,7 +41,7 @@ for (i=0; i < wkllbls.length; i++) {
     var weekLine = document.createElement ("li");
     var a = document.createElement ("a");
     var link = document.createTextNode (wkllbls[i]);
-    //weekLine.classList.add("weeks");
+    weekLine.classList.add("weeks");
     a.title = wkllbls[i];
     a.href = wklnks[i];
 
