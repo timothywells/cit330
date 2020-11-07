@@ -1,7 +1,5 @@
 ﻿/*Navigation*/
 var weekNav = document.querySelector(".wk_nav");
-var highlight = document.querySelector(".weeks");
-highlight.addEventListener("click", navHighlight);
 
 var wkllbls = [
     "Home",
@@ -41,7 +39,7 @@ for (i=0; i < wkllbls.length; i++) {
     var weekLine = document.createElement ("li");
     var a = document.createElement ("a");
     var link = document.createTextNode (wkllbls[i]);
-    weekLine.classList.add("weeks");
+    weekLine.id.add("weeks");
     a.title = wkllbls[i];
     a.href = wklnks[i];
 
@@ -49,6 +47,9 @@ for (i=0; i < wkllbls.length; i++) {
     weekLine.appendChild(a);
     weekNav.appendChild(weekLine);
 }
+
+var highlight = document.querySelector("#weeks");
+highlight.addEventListener("click", navHighlight);
 
 function navHighlight(){
     if (highlight.classlist[1] != "active") {

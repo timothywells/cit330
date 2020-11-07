@@ -150,9 +150,9 @@ iframe{
     margin: 0 auto;
 }
 
-/* .active{
+.active{
     background-color: #323232;
-} */
+}
 
 /*Meida for Phones*/
 @media only screen and (max-width: 400px) {
