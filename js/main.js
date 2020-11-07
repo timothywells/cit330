@@ -50,13 +50,13 @@ for (i=0; i < wkllbls.length; i++) {
     weekNav.appendChild(weekLine);
 }
 
-function navHighlight(){
-    if (highlight != "active") {
-        highlight.classList.toggle('active', true);
-    } else {
-        highlight.classList.toggle('active', false);
-    }
-}
+// function navHighlight(){
+//     if (highlight != "active") {
+//         highlight.classList.toggle('active', true);
+//     } else {
+//         highlight.classList.toggle('active', false);
+//     }
+// }
 /*Copy Right Date*/
 //document.getElementById('year').appendChild(document.createTextNode(new Date().getFullYear()))
 /*document.getElementById("head") = headInfo;
