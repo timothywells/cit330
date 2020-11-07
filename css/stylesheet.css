@@ -149,6 +149,11 @@ iframe{
     height: 100vh;
     margin: 0 auto;
 }
+
+/* .active{
+    background-color: #323232;
+} */
+
 /*Meida for Phones*/
 @media only screen and (max-width: 400px) {
     nav{

@@ -1,5 +1,8 @@
 ﻿/*Navigation*/
 var weekNav = document.querySelector(".wk_nav");
+// var highlight = document.querySelector(".weeks");
+// highlight.addEventListener("click", navHighlight);
+
 var wkllbls = [
     "Home",
     "Week 1",
@@ -38,6 +41,7 @@ for (i=0; i < wkllbls.length; i++) {
     var weekLine = document.createElement ("li");
     var a = document.createElement ("a");
     var link = document.createTextNode (wkllbls[i]);
+    //weekLine.classList.add("weeks");
     a.title = wkllbls[i];
     a.href = wklnks[i];
 
@@ -46,7 +50,13 @@ for (i=0; i < wkllbls.length; i++) {
     weekNav.appendChild(weekLine);
 }
 
-
+// function navHighlight(){
+//     if (highlight != "active") {
+//         highlight.classList.toggle('active', true);
+//     } else {
+//         highlight.classList.toggle('active', false);
+//     }
+// }
 /*Copy Right Date*/
 //document.getElementById('year').appendChild(document.createTextNode(new Date().getFullYear()))
 /*document.getElementById("head") = headInfo;
