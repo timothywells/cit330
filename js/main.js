@@ -48,16 +48,16 @@ for (i=0; i < wkllbls.length; i++) {
     weekNav.appendChild(weekLine);
 }
 
-const highlight = document.querySelector(".weeks");
-highlight.addEventListener("click", navHighlight);
+// const highlight = document.querySelector(".weeks");
+// highlight.addEventListener("click", navHighlight);
 
-function navHighlight(){
-    if (highlight.classList[1] === "active") {
-        highlight.classList.toggle('active', false);
-    } else {
-        highlight.classList.toggle('active', true);
-    }
-}
+// function navHighlight(){
+//     if (highlight.classList[1] === "active") {
+//         highlight.classList.toggle('active', false);
+//     } else {
+//         highlight.classList.toggle('active', true);
+//     }
+// }
 /*Copy Right Date*/
 //document.getElementById('year').appendChild(document.createTextNode(new Date().getFullYear()))
 /*document.getElementById("head") = headInfo;
