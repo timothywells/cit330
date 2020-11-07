@@ -48,14 +48,14 @@ for (i=0; i < wkllbls.length; i++) {
     weekNav.appendChild(weekLine);
 }
 
-var highlight = document.querySelector(".weeks");
+const highlight = document.querySelector(".weeks");
 highlight.addEventListener("click", navHighlight);
 
 function navHighlight(){
-    if (highlight.classList[1] != "active") {
-        highlight.classList.toggle('active', true);
-    } else {
+    if (highlight.classList[1] === "active") {
         highlight.classList.toggle('active', false);
+    } else {
+        highlight.classList.toggle('active', true);
     }
 }
 /*Copy Right Date*/
