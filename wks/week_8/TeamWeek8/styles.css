@@ -1,0 +1,61 @@
+body {
+  background-image: url("https://media.npr.org/assets/img/2020/08/27/nasa-goods-real_wide-9168d715c2d4c488d7a0e594b397d7abdd969d9d.png");
+  color: #FFE81F;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: stretch;
+}
+
+h1 {
+    font-family: 'Londrina Outline', cursive;
+    font-size: 50px;
+}
+
+img {
+    width: auto;
+    height: 100%;
+}
+
+li {
+    list-style: url('xwing2.png');
+    font-family: 'Londrina Outline', cursive;
+    font-size: 25px;
+}
+
+.deathstar {
+  list-style: url('deathstar2.png');
+}
+
+#previous {
+  float: left;
+}
+
+#next {
+  float: right;
+}
+
+#pages {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+button {
+  background-color: #FFE81F;
+  color: black;
+  font-weight: bold;
+  padding: 8px;
+  margin: 5px;
+  text-decoration: none;
+  border: none;
+  font-size: 12px;
+  border-radius: 2px;
+}

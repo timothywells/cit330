@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100%;
+    background-image: url("https://static01.nyt.com/images/2020/05/15/multimedia/15xp-earthquake-image2/merlin_172531992_e7344575-cc58-4100-99e3-3ce179a8afaf-superJumbo.jpg?quality=90&auto=webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main {    
+    opacity: 0.75;
+    margin: 1em;
+    padding: 1em;
+    background-color: white;
+}
+
+h1, p {
+    opacity: 1;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+    font-size: 1.75em;
+    font-weight: 600;
+    font-family: 'Stalinist One', cursive;
+}
+
+p {
+    font-size: 1em;
+}
+
+ul {
+    font-family: 'Big Shoulders Inline Text', cursive;
+}
+
+li {
+    font-family: 'Big Shoulders Inline Text', cursive;
+}
+
+.hidden {
+    display: none;
+}
+
