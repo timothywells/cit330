@@ -3,6 +3,8 @@ var weekNav = document.querySelector(".wk_nav");
 
 var wkllbls = [
     "Home",
+    "Project 1",
+    "Project 2",
     "Week 1",
     "Week 2",
     "Week 3",
@@ -20,6 +22,8 @@ var wkllbls = [
 ];
 var wklnks = [
     "/cit330/index.html",
+    "/cit330/wks/Project_1/index.html",
+    "/cit330/wks/Project_2/index.html",
     "/cit330/wks/week_1/index.html",
     "/cit330/wks/week_2/index.html",
     "/cit330/wks/week_3/index.html",
