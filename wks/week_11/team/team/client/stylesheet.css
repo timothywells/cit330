@@ -1,0 +1,35 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 900px;
+    display: flex;
+    align-content: center;
+}
+main{
+    margin: 0 auto;
+}
+h1{
+    font: small-caps 900 2em Arial, sans-serif;
+}
+h2{
+    font: small-caps 600 1.5em/0 Arial, sans-serif;
+}
+#errors{
+    font: italic small-caps 1.5em/2 cursive;
+    color: red;
+}
+form{
+    width: 100%;
+    margin: 1em 0;
+    padding: 1em;
+    background: rgb(209, 244, 255);
+    border-radius: 4px;
+}
+input, textarea{
+    width: 100%;
+    padding: .25em, .5em;
+    margin: .5em 0;
+    box-sizing: border-box;
+  }

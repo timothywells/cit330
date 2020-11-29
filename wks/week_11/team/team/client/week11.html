@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script type="module" src="week11.js" defer></script>
+  <title>Week 11 Team</title>
+</head>
+<body>
+  <main>
+    <h1>Auth Example app</h1>
+    <div id="errors" class="errors hidden"></div>
+    <form id="login">
+        <h2>Login</h2>
+        <input type="email" id="username" value="user1@email.com">
+        <input type="password" id="password" value="user1">
+        <input type="submit" value="Submit" id="submit">
+        <!-- <input type="reset" value="Reset"> -->
+    </form>
+
+
+    <form id="makeAPost">
+       <label for="newPost">Post Title: </label>
+       <input type="text" id="newTitle" name="newTitle" placeholder="Type something here...">
+       <label for="newPost">New Message: </label>
+       <input type="textarea" id="newPost" name="newPost" placeholder="Type something here...">
+       <input type="submit" value="Send Message" id="sendMessage">
+    </form>
+
+    <ul id="posts"></ul>
+
+  </main>
+  
+</body>
+</html>
