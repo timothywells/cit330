@@ -1,0 +1,51 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    margin: 0;
+    padding: 1em;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li{
+    display: inline-block;
+}
+main {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
+    background-color: lightblue;
+}
+footer{
+    margin: 0;
+    padding: 1em;
+    background-color: lightcoral;
+}
+
+
+div{
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+#cover {
+    background-image: url("https://th.bing.com/th/id/OIP.qAC5eAwRWV21vUVhQjed1gHaJ0?pid=Api&rs=1");
+    background-repeat: no-repeat;
+
+}
