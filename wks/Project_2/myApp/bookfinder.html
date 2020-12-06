@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheet.css">
-    <script src="./components/main.js" defer></script>
+
     <title>Book Finder</title>
 </head>
 <header>
@@ -14,10 +14,8 @@
                 <div id="menu" class="menu">Menu</div>
             </li>
             <li>
-                <form action="POST">
-                <input type="text" required></input>
-                <button>Search</button>
-                </form>
+                <input id="inputSearch" placeholder="Title or Author" required></input>
+                <button id="searchBTN" type="button">Search</button>
             </li>
             <li>
                 <div id="settings" class="settings">Settings</div>
@@ -27,20 +25,14 @@
 </header>
 <body>
     <main>
-        <div id="books">
-            <div id="cover"></div>
-            <ul>
-                <li>Title:</li>
-                <li>Author:</li>
-                <li>Publisher:</li>
-                <li>Publish Date:</li>
-                <li>Description:</li>
-            </ul>
-        </div>
+        <div id="books"></div>
     </main>
+
 </body>
 <footer>
     <div id="copyright">Copyright &copy; 2020 Timothy Wells</div>
     <div id="schoolProject">BYU-Idaho - WDD 330 - Front End Development II </div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./main.js"></script>
 </html>
