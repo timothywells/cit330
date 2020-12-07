@@ -4,23 +4,24 @@ function bookSearch(){
     console.log(search)
 
     $.ajax({
-        url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
+        url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance",
         dataType: "json",
-
+        //GET https://books.googleapis.com/books/v1/volumes?q=horse&maxResults=36&orderBy=relevance&key=[YOUR_API_KEY] HTTP/1.1
         success: function(data) {
             for(i = 0; i < data.items.length; i++) {
                 let result = ""
-                result += "<div class=bookCard>"
-                result += "<img src=" + data.items[i].volumeInfo.imageLinks.smallThumbnail + "/>"
-                result += "<ul>"
-                result += "<li><h2>" + data.items[i].volumeInfo.title + "</h2></li>"
-                result += "<li>Author(s):<ul>" 
-                data.items[i].volumeInfo.authors.forEach(author => {result += "<li>" + author + "</li>" 
+                result += "<div class=bookCard style={list-style-type: none;}>"
+                result += "<a href=" + data.items[i].volumeInfo.infoLink + "><img class=bookCover src=" + data.items[i].volumeInfo.imageLinks.smallThumbnail + "/></a>"
+                result += "<div class=bookDetails>"
+                result += "<h3>" + data.items[i].volumeInfo.title + "</h3>"
+                result += "<h4>Author(s):</h4>"
+                result += "<ul>" 
+                    data.items[i].volumeInfo.authors.forEach(author => {result += "<li>" + author + "</li>" 
                 });
-                result +="</ul></li>"
-                //result += "<li>" +  + "</li>"
                 result += "</ul>"
-                result += "</div>"
+                result += "<p id=description>" + data.items[i].volumeInfo.description + "</p>"
+                //result += "<p>" +  + "</p>"
+                result += "</div></div>"
                 books.innerHTML += result
             }      
         },

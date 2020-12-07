@@ -9,25 +9,20 @@
 </head>
 <header>
     <nav>
-        <ul>
-            <li>
-                <div id="menu" class="menu">Menu</div>
-            </li>
-            <li>
-                <input id="inputSearch" placeholder="Title or Author" required></input>
-                <button id="searchBTN" type="button">Search</button>
-            </li>
-            <li>
-                <div id="settings" class="settings">Settings</div>
-            </li>
+        <ul id="filterMenu" class="filterMenu">Filter
+            <li></li>
         </ul>
     </nav>
+    <div id="searchDiv" class="searchDiv">
+        <input id="inputSearch" placeholder="Title or Author" required></input>
+        <button id="searchBTN" type="button">Search</button>
+    </div>
+    <div id="settings" class="settings">Settings</div>
 </header>
 <body>
     <main>
-        <div id="books"></div>
+        <div id="books" class="bookContainer"></div>
     </main>
-
 </body>
 <footer>
     <div id="copyright">Copyright &copy; 2020 Timothy Wells</div>
