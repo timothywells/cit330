@@ -1,15 +1,17 @@
 function bookSearch(){
     var search = document.getElementById('inputSearch').value
-    
+    var select = document.getElementById('searchSelect').value
     document.getElementById('books').innerHTML = ""
     console.log(search)
 
     $.ajax({
-        url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance",
+        // url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance",
+        url: "https://www.googleapis.com/books/v1/volumes?q=" + select + search + "&maxResults=36&orderBy=relevance",
+
         dataType: "json",
         type: 'GET',
-        //GET https://books.googleapis.com/books/v1/volumes?q=horse&maxResults=36&orderBy=relevance&key=[YOUR_API_KEY] HTTP/1.1
         success: function(data) {
+           
             for(i = 0; i <= data.items.length; i++) {
                 let result = ""
                 result += "<div class=bookCard style={list-style-type: none;}>"
@@ -18,7 +20,7 @@ function bookSearch(){
                 result += "<h3>" + data.items[i].volumeInfo.title + "</h3>"
                 result += "<h4>Author(s):</h4>"
                 result += "<ul>" 
-                    data.items[i].volumeInfo.authors.forEach(author => {result += "<li>" + author + "</li>" });
+                    data.items[i].volumeInfo.authors.forEach(author => {result += "<li>" + author + "</li>" })
                 result += "</ul>"
                 result += "<p id=description>" + data.items[i].volumeInfo.description + "</p>"
                 //result += "<p>" +  + "</p>"
@@ -26,6 +28,9 @@ function bookSearch(){
                 books.innerHTML += result
             }      
         },
+        error: function(jqXHR, status, err) {
+            alert("Please enter informatiion into the search field to find a book");
+          },
     });
 }
 document.getElementById('searchBTN').addEventListener('click', bookSearch, false)
