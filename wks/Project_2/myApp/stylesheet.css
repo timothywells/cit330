@@ -23,7 +23,7 @@ header {
     flex-direction: row;
     background-color: #2d4758;
     color: whitesmoke;
-    font: normal small-caps 700 1.5em fantasy;
+    font: normal small-caps 700 1.5em Arial;
     height: 4em;
     align-items: center;
     justify-content: space-around;
@@ -83,7 +83,7 @@ footer {
     text-align: center;
     color: whitesmoke;
     background-color: #2d4758;
-    font: normal small-caps 600 1em fantasy;
+    font: normal small-caps 600 1em Arial;
     height: 6em;
     display: flex;
     flex-direction: column;
