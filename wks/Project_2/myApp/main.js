@@ -29,6 +29,9 @@ document.getElementById('searchBTN').addEventListener('click', bookSearch, false
 
 function forLoop(data) {
     for(i = 0; i <= data.items.length; i++) {
+        if (typeof data.items[i].volumeInfo.value === 'undefined') {
+            result += "<p>Information Unavailable</p>"
+        }
         let result = ""
         result += "<div class=bookCard style={list-style-type: none;}>"
         result += "<a href=" + data.items[i].volumeInfo.infoLink + "><img class=bookCover src=" + data.items[i].volumeInfo.imageLinks.smallThumbnail + "/></a>"
