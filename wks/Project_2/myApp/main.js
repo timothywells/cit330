@@ -4,8 +4,9 @@ function bookSearch(){
     //filter by book type
     document.getElementById('books').innerHTML = ""
     console.log(search)
-    if(search == NULL || "") {
+    if(search == "" || search == NULL) {
         alert("Please enter informatiion into the search field to find a book")
+        return false
             //if search is empty, set allert else ajax
     } else {
         $.ajax({
