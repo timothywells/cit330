@@ -4,19 +4,22 @@ function bookSearch(){
     //filter by book type
     document.getElementById('books').innerHTML = ""
     console.log(search)
-
-    //if search is empty, set allert else ajax
-    $.ajax({
-        // url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance",
-        url: "https://www.googleapis.com/books/v1/volumes?q=" + select + search + "&maxResults=36&orderBy=relevance&key=" + APIKey(),
-        dataType: "json",
-        type: 'GET',
-        success: forLoop,
-        //setup for if error from google cant load page
-        error: function() {
-            alert("Please enter informatiion into the search field to find a book");
-          },
-    });
+    if(search == NULL || "") {
+        alert("Please enter informatiion into the search field to find a book")
+            //if search is empty, set allert else ajax
+    } else {
+        $.ajax({
+            // url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance",
+            url: "https://www.googleapis.com/books/v1/volumes?q=" + select + search + "&maxResults=36&orderBy=relevance&key=" + APIKey(),
+            dataType: "json",
+            type: 'GET',
+            success: forLoop,
+            //setup for if error from google cant load page
+            error: function() {
+                alert("Please enter informatiion into the search field to find a book");
+            },
+        });
+    }
 }
 document.getElementById('searchBTN').addEventListener('click', bookSearch, false)
 //event listener for enter key
