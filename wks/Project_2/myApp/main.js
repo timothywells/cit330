@@ -30,7 +30,7 @@ document.getElementById('searchBTN').addEventListener('click', bookSearch, false
 function forLoop(data) {
     for(i = 0; i <= data.items.length; i++) {
         let result = ""
-        if (typeof data.items[i].volumeInfo.value === 'undefined') {
+        if (data.items[i].volumeInfo.value === undefined) {
             result += "<p>Information Unavailable</p>"
         }
         result += "<div class=bookCard style={list-style-type: none;}>"
