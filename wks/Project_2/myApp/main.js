@@ -8,8 +8,7 @@ function bookSearch(){
         return false
     } else if (select == ""){
         $.ajax({
-            // url: "https://www.googleapis.com/books/v1/volumes?q=&maxResults=36&orderBy=relevance&key=" + APIkey,
-            url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance",
+            url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance&key=" + APIkey,
             dataType: "json",
             type: 'GET',
             success: forLoop,
@@ -19,8 +18,7 @@ function bookSearch(){
         });
     } else {
         $.ajax({
-            // url: "https://www.googleapis.com/books/v1/volumes?q=&maxResults=36&orderBy=relevance&key=" + APIkey,
-            url: "https://www.googleapis.com/books/v1/volumes?q=" + select + search + "&maxResults=36&orderBy=relevance",
+            url: "https://www.googleapis.com/books/v1/volumes?q=" + select.select + "&maxResults=36&orderBy=relevance&key=" + APIkey,
             dataType: "json",
             type: 'GET',
             success: forLoop,
@@ -50,8 +48,8 @@ function forLoop(data) {
             result += "<div class=links>"
                 result += "<div>"
                     //result += '<script type=text/javascript src=https://books.google.com/books/previewlib.js></script>'
-                    result += '<script type=text/javascript>GBS_insertPreviewButtonPopup(\'ISBN:' + data.items[i].volumeInfo.industryIdentifiers[0].identifier + '\');</script>'                        
                     result += '<span id=GBS_Button0><img src=https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif border=0></span>'
+                    result += '<script type=text/javascript>GBS_insertPreviewButtonPopup(\'ISBN:' + data.items[i].volumeInfo.industryIdentifiers[0].identifier + '\');</script>'                        
                 result += "</div>"
                 result += "<div class=linkbtn><a href=" + (data.items[i].volumeInfo.previewLink || alert("Preview Unavailable")) + " target=_blank>Preview</a></div>"
                 result += "<div class=linkbtn><a href=" + (data.items[i].volumeInfo.infoLink || alert("Preview Unavailable")) + " target=_blank>More Info</a></div>"
