@@ -8,12 +8,7 @@
     <title>Book Finder</title>
 </head>
 <header>
-    <nav>
-        <ul id="filterMenu" class="filterMenu">Filter
-            <li></li>
-        </ul>
-    </nav>
-    <form id="searchForm" class="searchForm" required>
+    <form id="searchForm" class="searchForm">
         <select name="searchSelect" id="searchSelect">
             <option value="" selected>All</option>
             <option value="intitle:">Title</option>
@@ -27,16 +22,18 @@
         <input id="inputSearch" placeholder="Title or Author"></input>
         <button id="searchBTN" type="button">Search</button>
     </form>
-    <div id="settings" class="settings">Settings</div>
 </header>
-<body>
+<body class="parallax">
     <main>
         <div id="books" class="bookContainer"></div>
     </main>
+    <!-- <script type="text/javascript" src="//books.google.com/books/previewlib.js"></script> -->
 </body>
 <footer>
-    <div id="copyright">Copyright &copy; 2020 Timothy Wells</div>
-    <div id="schoolProject">BYU-Idaho - WDD 330 - Front End Development II </div>
+    <div class="footer">
+        <div id="copyright">Copyright &copy; 2020 Timothy Wells</div>
+        <div id="schoolProject">BYU-Idaho - WDD 330 - Front End Development II</div>
+    </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./main.js"></script>

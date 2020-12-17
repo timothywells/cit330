@@ -1,0 +1,177 @@
+/*---------- Setting the HTML ----------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*---------- Setting the body size ----------*/
+body {
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 900px;
+}
+
+
+/*---------- Button Fomatting ----------*/
+button{
+  text-decoration: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: 3em;
+  width: 6em;
+  cursor: pointer;
+}
+
+/*-------------------- Header section --------------------*/
+/*---------- Style the header ----------*/
+.header {
+  background-color: #003b6f;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  margin-bottom: 1vh;}
+
+h2 {
+  margin: .5em;}
+
+/*--------- Style the input ---------*/
+.inputsection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #003b6f;}
+
+input {
+  margin: 0;
+  padding: 1em;
+  height: 3em;
+  width: 75%;
+  border: none;
+  border-radius: 0;
+  font-size: 1em;
+  /*float: left;*/}
+
+/*---------- Add Button Style ----------*/
+.addBtn {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  height: 3em;
+  border: none;
+  border-radius: 0;
+  font-size: 1em;
+  background: #d9d9d9;
+  color: #555;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  justify-content: center;
+  align-items: center;
+    /*float: left;*/}
+
+  .addBtn:hover {
+    background-color: #bbb;}
+  
+  /*-------------------- Filter Button Style --------------------*/
+
+  .btn {
+    display: inline-flex;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    height: 3em;
+    width: 8em;
+    font: 1em;
+    transition: 0.3s;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+  .show {
+    display: block;
+  }
+
+/*---------- Setup the todo container ----------*/
+.todo-container{
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/}
+/*---------- Unordered List formatting ----------*/
+ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;}
+/*---------- All Class Formatting ----------*/
+.all{
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin: 1vh 0;
+  padding: 0;
+  height: auto;
+  list-style-type: none;
+  background: #eee;
+  font-size: 1em;
+  transition: 0.2s;
+  align-items: center;}
+
+.all:nth-child(odd) {
+  background: #f9f9f9;}
+
+.all:hover {
+  background: #ddd;}
+
+/*---------- Done ----------*/
+.done-button {
+  background-color: green;
+  color: #fff;
+  padding: 0;
+  margin: 0;}
+
+.done-button:hover{
+  background-color: darkgreen;}
+
+ .todo{
+   color: black;
+ } 
+/*---------- Delete ----------*/
+.delete-button {
+  color: white;
+  background-color: darkred;
+  padding: 0;
+  margin: 0;}
+
+.delete-button:hover {
+  background-color: red;}
+
+/*---------- Listed Items actions and formatting ----------*/
+.crossed{
+  text-decoration: line-through;
+  color: white;}
+
+.done{
+  background-color: #2F2F2F;}
+
+.done:nth-child(odd) {
+  background: #2F2F2F;}
+
+.invisible{
+  display: none;
+}
+.visible{
+  display: initial;
+}
