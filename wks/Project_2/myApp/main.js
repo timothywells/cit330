@@ -40,7 +40,7 @@ function forLoop(data) {
                 result += "<div>"
                     //result += '<script type=text/javascript src=https://books.google.com/books/previewlib.js></script>'
                     result += '<script type=text/javascript>GBS_insertPreviewButtonPopup(\'ISBN:' + data.items[i].volumeInfo.industryIdentifiers[0].identifier + '\');</script>'                        
-                    result += '<span style=cursor:pointer; id=GBS_Button0><img src=https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif border=0></span>'
+                    result += '<span style=cursor:pointer; id=GBS_Button0><img src=https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif style=cursor:pointer; border=0></span>'
                 result += "</div>"
                 result += "<div class=linkbtn><a href=" + (data.items[i].volumeInfo.previewLink || alert("Preview Unavailable")) + " target=_blank>Preview</a></div>"
                 result += "<div class=linkbtn><a href=" + (data.items[i].volumeInfo.infoLink || alert("Preview Unavailable")) + " target=_blank>More Info</a></div>"
