@@ -6,6 +6,17 @@ function bookSearch(){
     if(search == "") {
         alert("Please enter informatiion into the search field to find a book")
         return false
+    } else if (select == ""){
+        $.ajax({
+            // url: "https://www.googleapis.com/books/v1/volumes?q=&maxResults=36&orderBy=relevance&key=" + APIkey,
+            url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance",
+            dataType: "json",
+            type: 'GET',
+            success: forLoop,
+            error: function() {
+                alert("Please enter informatiion into the search field to find a book");
+            },
+        });
     } else {
         $.ajax({
             // url: "https://www.googleapis.com/books/v1/volumes?q=&maxResults=36&orderBy=relevance&key=" + APIkey,
