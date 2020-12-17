@@ -1,7 +1,7 @@
 function bookSearch(){
     var search = document.getElementById('inputSearch').value
     var select = document.getElementById('searchSelect').value
-    var APIkey = "AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk"
+    //var APIkey = "AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk"
     document.getElementById('books').innerHTML = ""
     console.log(search)
     if(search == "") {
@@ -9,7 +9,9 @@ function bookSearch(){
         return false
     } else if (select == ""){
         $.ajax({
-            url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance&key=" + APIkey,
+            //url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance&key=" + APIkey,
+            url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance",
+
             dataType: "json",
             type: 'GET',
             success: forLoop,
@@ -19,7 +21,9 @@ function bookSearch(){
         });
     } else {
         $.ajax({
-            url: "https://www.googleapis.com/books/v1/volumes?q=" + select.select + "&maxResults=36&orderBy=relevance&key=" + APIkey,
+            //url: "https://www.googleapis.com/books/v1/volumes?q=" + select.select + "&maxResults=36&orderBy=relevance&key=" + APIkey,
+            url: "https://www.googleapis.com/books/v1/volumes?q=" + select.select + "&maxResults=36&orderBy=relevance",
+
             dataType: "json",
             type: 'GET',
             success: forLoop,
@@ -36,7 +40,7 @@ function forLoop(data) {
         let result = ""
         result += "<div class=bookCard>"
             result += "<div class=row>"
-                result += "<a href=" + (data.items[i].volumeInfo.infoLink || '') + "><img class=bookCover src=" + (data.items[i].volumeInfo.imageLinks.smallThumbnail || 'Image Unavailable') + "/></a>"
+                result += "<a href=" + (data.items[i].volumeInfo.infoLink || '') + "><img class=bookCover src=" + (data.items[i].volumeInfo.imageLinks.smallThumbnail) + "/></a>"
                     result += "<div class=bookDetails>"
                         result += "<h3>" + (data.items[i].volumeInfo.title || 'Title Unavailable') + "</h3>"
                             result += "<h4>Author(s):</h4>"
