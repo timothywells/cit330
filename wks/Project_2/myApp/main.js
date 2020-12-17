@@ -8,7 +8,7 @@ function bookSearch(){
         return false
     } else if (select == ""){
         $.ajax({
-            url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance&key=" + APIkey,
+            url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance&key=" + APIkey(),
             dataType: "json",
             type: 'GET',
             success: forLoop,
@@ -18,7 +18,7 @@ function bookSearch(){
         });
     } else {
         $.ajax({
-            url: "https://www.googleapis.com/books/v1/volumes?q=" + select.select + "&maxResults=36&orderBy=relevance&key=" + APIkey,
+            url: "https://www.googleapis.com/books/v1/volumes?q=" + select.select + "&maxResults=36&orderBy=relevance&key=" + APIkey(),
             dataType: "json",
             type: 'GET',
             success: forLoop,
