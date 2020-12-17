@@ -1,13 +1,11 @@
 function bookSearch(){
     var search = document.getElementById('inputSearch').value
     var select = document.getElementById('searchSelect').value
-    //filter by book type
     document.getElementById('books').innerHTML = ""
     console.log(search)
     if(search == "") {
         alert("Please enter informatiion into the search field to find a book")
         return false
-            //if search is empty, set allert else ajax
     } else {
         $.ajax({
             // url: "https://www.googleapis.com/books/v1/volumes?q=&maxResults=36&orderBy=relevance&key=" + APIkey,
@@ -15,7 +13,6 @@ function bookSearch(){
             dataType: "json",
             type: 'GET',
             success: forLoop,
-            //setup for if error from google cant load page
             error: function() {
                 alert("Please enter informatiion into the search field to find a book");
             },
@@ -23,8 +20,6 @@ function bookSearch(){
     }
 }
 document.getElementById('searchBTN').addEventListener('click', bookSearch, false)
-//event listener for enter key
-//uncaught error set as Unavailable
 
 function forLoop(data) {
     for(i = 0; i <= data.items.length; i++) {
@@ -43,7 +38,7 @@ function forLoop(data) {
             result += "</div>"
             result += "<div class=links>"
                 result += "<div>"
-                    result += '<script type=text/javascript src=//books.google.com/books/previewlib.js></script>'
+                    //result += '<script type=text/javascript src=https://books.google.com/books/previewlib.js></script>'
                     result += '<script type=text/javascript>GBS_insertPreviewButtonPopup(\'ISBN:' + data.items[i].volumeInfo.industryIdentifiers[0].identifier + '\');</script>'                        
                     result += '<span style=cursor:pointer; id=GBS_Button0><img src=https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif style=cursor:pointer; border=0></span>'
                 result += "</div>"
@@ -61,5 +56,3 @@ function APIKey() {
 }
 
 //result += "<p>" +  + "</p>"
-//API key
-//AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk
