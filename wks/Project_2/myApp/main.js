@@ -1,7 +1,7 @@
 function bookSearch(){
     var search = document.getElementById('inputSearch').value
     var select = document.getElementById('searchSelect').value
-    var APIKey = "AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk"
+    //var APIkey = "AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk"
     document.getElementById('books').innerHTML = ""
     console.log(search)
     if(search == "") {
@@ -61,8 +61,8 @@ function forLoop(data) {
     }      
 }
 
-// function APIKey() {
-//     return "AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk"
-// }
+function APIkey() {
+    return "AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk"
+}
 
 //result += "<p>" +  + "</p>"
