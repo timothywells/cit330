@@ -1,6 +1,7 @@
 function bookSearch(){
     var search = document.getElementById('inputSearch').value
     var select = document.getElementById('searchSelect').value
+    var APIkey = "AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk"
     document.getElementById('books').innerHTML = ""
     console.log(search)
     if(search == "") {
@@ -10,7 +11,7 @@ function bookSearch(){
         $.ajax({
             type:"GET",
             data: {search:search, select: ""},
-            url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance",
+            url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance&key=" + APIkey,
             dataType: "text",
             success: forLoop,
             error: function() {
@@ -21,7 +22,7 @@ function bookSearch(){
         $.ajax({
             type:"GET",
             data: {search:search, select:select},
-            url: "https://www.googleapis.com/books/v1/volumes?q=" + select + search + "&maxResults=36&orderBy=relevance",
+            url: "https://www.googleapis.com/books/v1/volumes?q=" + select + search + "&maxResults=36&orderBy=relevance&key=" + APIkey,
             dataType: "text",
             success: forLoop,
             error: function() {
@@ -29,30 +30,6 @@ function bookSearch(){
             },
         });
     }
-    // if(search == "") {
-    //     alert("Please enter informatiion into the search field to find a book")
-    //     return false
-    // } else if (select == ""){
-    //     $.ajax({
-    //         type: "GET",
-    //         url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=36&orderBy=relevance",
-    //         dataType: "json",
-    //         success: forLoop,
-    //         error: function() {
-    //             alert("Please enter informatiion into the search field to find a book");
-    //         },
-    //     });
-    // } else {
-    //     $.ajax({
-    //         type: "GET",
-    //         url: "https://www.googleapis.com/books/v1/volumes?q=" + select + search + "&maxResults=36&orderBy=relevance",
-    //         dataType: "json",
-    //         success: forLoop,
-    //         error: function() {
-    //             alert("Please enter informatiion into the search field to find a book");
-    //         },
-    //     });
-    // }
 }
 document.getElementById('searchBTN').addEventListener('click', bookSearch)
 
@@ -62,7 +39,6 @@ function forLoop(inputdata) {
     var i;
     for(i in data.items) {
         let result = ""
-        //function image() {"try{data.items[i].volumeInfo.imageLinks.thumbnail} catch {'nobook.jpg'}"}
         result += "<div class=bookCard>"
             result += "<div class=row>"
                 result += "<a href=" + (data.items[i].volumeInfo.infoLink || '') + ">"
@@ -101,22 +77,6 @@ function forLoop(inputdata) {
     }
 }
 
-
-// function authors() {
-//     try {
-//         data.items[i].volumeInfo.authors.forEach(author => {result += "<li>" + (author) + "</li>"})
-//     } catch {
-//         return "<li>Author Unavailable</li>"
-//     }
-// }
-
-
 // function APIkey() {
 //     return "AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk"
 // }
-
-//result += "<p>" +  + "</p>"
-
-// data =  JSON.parse(JSON.stringify(data).replace(/:null/gi, ":"""))"
-    //var APIkey = "AIzaSyDdn6yzTBR15sshvZlumi1L_HVSpX3lvgk"
-    //let cleaned = JSON.parse(JSON.stringify(data).replace(/null/gi, "\:\"\""))

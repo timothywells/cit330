@@ -246,11 +246,9 @@ p{
     main {
     margin-top: 8em;
     }
-
     form input {
         text-indent: 1em;
     }
-
     form select{
         text-indent: .25em;
     }
