@@ -49,7 +49,7 @@ function forLoop(inputdata) {
                             result += "<img class=bookCover src=" + data.items[i].volumeInfo.imageLinks.smallThumbnail + "/>"
                         }
                     } catch {
-                        result += "<img class=bookCover src=nobook.jpg/>"
+                        result += "<img class=bookCover src=nobook.jpg>"
                     }
                 result += "</a>"
                 result += "<div class=bookDetails>"
