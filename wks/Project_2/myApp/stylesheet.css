@@ -57,11 +57,9 @@ form select {
     border: none;
     text-align: -webkit-center;
     text-align: center;
-    text-align: justify;
     width: 25vw;
     border-radius: .5em 0 0 .5em;
     outline: none;
-    text-indent: 1em;
     appearance: none;    
 }
 
@@ -248,8 +246,5 @@ p{
     }
     form input {
         text-indent: 1em;
-    }
-    form select{
-        text-indent: .25em;
     }
 }
