@@ -166,12 +166,11 @@ img{
 iframe{
     width: 100%;
     height: 100vh;
-    margin: 0 auto;
+    margin: 2em auto;
 }
 
 .bookfinder{
     width: 50%;
-    margin: 5em auto;
 }
 .active{
     background-color: #323232;
