@@ -169,6 +169,10 @@ iframe{
     margin: 0 auto;
 }
 
+.bookfinder{
+    width: 50%;
+    margin: 5em auto;
+}
 .active{
     background-color: #323232;
 }
